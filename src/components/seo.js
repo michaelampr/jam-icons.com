@@ -1,40 +1,17 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
-
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
-
+const SEO = ({ lang, meta, title }) => {
+  const metaTitle = title || "Jam icons / 890+ pixel perfect icons"
+  const metaDescription =
+    "890+ handcrafted SVG icons to make your web app awesome."
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      title={metaTitle}
       meta={[
         {
           name: `description`,
@@ -42,7 +19,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:description`,
@@ -58,15 +35,60 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: "@michaelampr",
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+
+        {
+          name: "robots",
+          content: "index,follow",
+        },
+        {
+          name: "author",
+          content: "Michael Amprimo <@michaeleampr>",
+        },
+        {
+          name: "designer",
+          content: "Michael Amprimo",
+        },
+        {
+          name: "copyright",
+          content: "©Jam Icons / All rights reserved",
+        },
+        {
+          name: "url",
+          content: "https://jam-icons.com",
+        },
+        {
+          name: "msapplication-TileColor",
+          content: "#ffc40d",
+        },
+        {
+          name: "theme-color",
+          content: "#f5c25a",
+        },
+        {
+          property: "og:url",
+          content: "https://jam-icons.com",
+        },
+        {
+          property: "og:image",
+          content: "https://jam-icons.com/img/jam-large.jpg",
+        },
+        {
+          name: "twitter:site",
+          content: "@michaelampr",
+        },
+        {
+          name: "twitter:image",
+          content: "https://jam-icons.com/img/jam-large.jpg",
         },
       ].concat(meta)}
     />
@@ -83,7 +105,7 @@ SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 }
 
 export default SEO
