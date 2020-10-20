@@ -1,5 +1,6 @@
 import React, { createRef, useContext } from "react"
 import { AppContext } from "@/context/AppContext"
+import PropTypes from "prop-types"
 import styles from "./icon-item.module.css"
 
 const IconItem = ({ icon }) => {
@@ -79,6 +80,10 @@ const IconItem = ({ icon }) => {
       </div>
     </div>
   )
+}
+
+IconItem.propTypes = {
+  icon: PropTypes.object.isRequired,
 }
 
 export default IconItem

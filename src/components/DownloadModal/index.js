@@ -1,5 +1,6 @@
 import React from "react"
 import Modal from "@/components/Modal"
+import PropTypes from "prop-types"
 
 const DownloadModal = ({ toggleDownload, showDlModal }) => {
   return (
@@ -45,6 +46,11 @@ const DownloadModal = ({ toggleDownload, showDlModal }) => {
       </a>
     </Modal>
   )
+}
+
+DownloadModal.propTypes = {
+  showDlModal: PropTypes.bool.isRequired,
+  toggleDownload: PropTypes.func.isRequired,
 }
 
 export default DownloadModal

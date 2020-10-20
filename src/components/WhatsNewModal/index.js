@@ -1,5 +1,6 @@
 import React from "react"
 import Modal from "@/components/Modal"
+import PropTypes from "prop-types"
 
 const WhatsNewModal = ({ toggleWhatsNew, showWhatsNewModal }) => {
   return (
@@ -31,6 +32,11 @@ const WhatsNewModal = ({ toggleWhatsNew, showWhatsNewModal }) => {
       </ul>
     </Modal>
   )
+}
+
+WhatsNewModal.propTypes = {
+  showWhatsNewModal: PropTypes.bool.isRequired,
+  toggleWhatsNew: PropTypes.func.isRequired,
 }
 
 export default WhatsNewModal

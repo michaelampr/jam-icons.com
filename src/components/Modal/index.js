@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import styles from "./modal.module.css"
+import PropTypes from "prop-types"
 
 const Modal = ({ title, children, onClose }) => {
   const [isClosing, setIsClosing] = useState(false)
@@ -32,6 +33,12 @@ const Modal = ({ title, children, onClose }) => {
       <div className={styles.overlay} />
     </div>
   )
+}
+
+Modal.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  onClose: PropTypes.func.isRequired,
 }
 
 export default Modal
