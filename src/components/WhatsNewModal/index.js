@@ -24,7 +24,12 @@ const WhatsNewModal = ({ toggleWhatsNew, showWhatsNewModal }) => {
       <ul>
         <li>Some icons will be redesigned and new ones will be added.</li>
         <li>Sketch file will be added as a download element.</li>
-        <li>And more 🙂</li>
+        <li>
+          And more{" "}
+          <span role="img" aria-label="smile icon">
+            🙂
+          </span>
+        </li>
       </ul>
       <h2 className="text-lg font-bold mt-5 mb-1">What about v2.0.0?</h2>
       <ul>

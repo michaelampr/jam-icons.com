@@ -9,7 +9,7 @@ const CopiedFlash = () => {
     if (isCopied) {
       setTimeout(() => setIsCopied(false), 1350)
     }
-  }, [isCopied])
+  }, [isCopied, setIsCopied])
 
   return (
     isCopied && (
