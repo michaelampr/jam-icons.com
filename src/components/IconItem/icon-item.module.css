@@ -1,0 +1,24 @@
+.item {
+  height: 100px;
+  &:hover {
+    box-shadow: 0 0 0 3px rgba(245, 194, 90, 0.85);
+    .cta {
+      max-height: 100px;
+      @apply opacity-100;
+    }
+    .name {
+      @apply opacity-100 mb-2 visible;
+    }
+  }
+}
+
+.name {
+  background: rgb(0 0 0 / 79%);
+  padding: 0.25rem 0.5rem;
+  font-size: 13px;
+  bottom: 100%;
+}
+
+.cta {
+  max-height: 0;
+}
