@@ -1,7 +1,8 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/browser-apis/
- */
+import "./src/assets/css/jam.css"
+import React from "react"
 
-// You can delete this file if you're not using it
+import { AppProvider } from "./src/context/AppContext"
+
+export const wrapRootElement = ({ element }) => (
+  <AppProvider>{element}</AppProvider>
+)
