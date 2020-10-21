@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react"
 import IconItem from "@/components/IconItem"
 import IconsListPlaceholder from "@/components/IconsListPlaceholder"
 import icons from "@/data/icons"
-import keywords from "@/data/keywords"
 import { AppContext } from "@/context/AppContext"
 
 const IconsList = () => {
@@ -13,11 +12,9 @@ const IconsList = () => {
   useEffect(() => {
     let filteredIcons = icons
     if (filter) {
-      filteredIcons = filteredIcons.filter(icon => {
-        const inKeywords =
-          keywords[icon.name] && keywords[icon.name].includes(filter)
-        return icon.name.includes(filter) || inKeywords
-      })
+      filteredIcons = filteredIcons.filter(
+        icon => icon.name.includes(filter) || icon.keywords.includes(filter)
+      )
     }
     if (category !== "all") {
       filteredIcons = filteredIcons.filter(icon => icon.category === category)
