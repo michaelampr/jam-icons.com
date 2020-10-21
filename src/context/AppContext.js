@@ -1,10 +1,23 @@
 import React, { createContext, useState } from "react"
 
-export const AppContext = createContext()
+const defaultState = {
+  category: "all",
+  setCategory: () => {},
+  isCopied: false,
+  setIsCopied: () => {},
+  filter: null,
+  setFilter: () => {},
+  sizeFilter: 24,
+  setSizeFilter: () => {},
+  typeFilter: "both",
+  setTypeFilter: () => {},
+}
+
+export const AppContext = createContext(defaultState)
 
 export const AppProvider = ({ children }) => {
   const [category, setCategory] = useState("all")
-  const [filter, setFilter] = useState()
+  const [filter, setFilter] = useState(null)
   const [isCopied, setIsCopied] = useState(false)
   const [sizeFilter, setSizeFilter] = useState(24)
   const [typeFilter, setTypeFilter] = useState("both")
