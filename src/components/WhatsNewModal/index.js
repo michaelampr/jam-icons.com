@@ -11,10 +11,7 @@ const WhatsNewModal = ({ toggleWhatsNew, showWhatsNewModal }) => {
     >
       <h2 className="text-lg font-bold mt-5 mb-1">v3.0.0</h2>
       <ul>
-        <li>
-          Support for font icons and JS approach have been dropped altogether to
-          focus on SVGs only.
-        </li>
+        <li>Support for font and JS has been dropped to focus on SVGs only.</li>
         <li>
           The website has been fully rewritten and redesigned. Now, hovering an
           icon gives you the choice to either download it or copy the source.
@@ -33,7 +30,10 @@ const WhatsNewModal = ({ toggleWhatsNew, showWhatsNewModal }) => {
       </ul>
       <h2 className="text-lg font-bold mt-5 mb-1">What about v2.0.0?</h2>
       <ul>
-        <li>Support has been dropped, but icons are still accessible here: </li>
+        <li>
+          Support has been dropped, but icons are still accessible here:
+          https://v2.jam-icons.com
+        </li>
       </ul>
     </Modal>
   )
