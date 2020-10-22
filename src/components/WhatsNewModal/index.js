@@ -31,11 +31,12 @@ const WhatsNewModal = ({ toggleWhatsNew, showWhatsNewModal }) => {
       <h2 className="text-lg font-bold mt-5 mb-1">What about v2.0.0?</h2>
       <ul>
         <li>
-          Support has been dropped, but icons are still accessible here:
+          Support has been dropped, but icons are still accessible here:{" "}
           <a
             href="https://v2.jam-icons.com"
             target="_blank"
             rel="noopener noreferrer"
+            className="hover:text-yellow-500 text-gray-600 font-semibold transition-all duration-300"
           >
             https://v2.jam-icons.com
           </a>
