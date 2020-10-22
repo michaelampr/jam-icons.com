@@ -32,7 +32,13 @@ const WhatsNewModal = ({ toggleWhatsNew, showWhatsNewModal }) => {
       <ul>
         <li>
           Support has been dropped, but icons are still accessible here:
-          https://v2.jam-icons.com
+          <a
+            href="https://v2.jam-icons.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://v2.jam-icons.com
+          </a>
         </li>
       </ul>
     </Modal>
