@@ -6,7 +6,7 @@ const DownloadModal = ({ toggleDownload, showDlModal }) => {
   return (
     <Modal onClose={toggleDownload} title="Download" isOpen={showDlModal}>
       <a
-        href=""
+        href="https://github.com/michaelampr/jam/archive/master.zip"
         target="_blank"
         rel="noopener noreferrer"
         className="items-center flex flex-col justify-center hover:bg-yellow-500 transition-all duration-300 bg-gray-200 font-semibold  mb-5  rounded-lg p-4 text-center pb-6"
@@ -27,7 +27,7 @@ const DownloadModal = ({ toggleDownload, showDlModal }) => {
       </a>
 
       <a
-        href=""
+        href="#"
         className="items-center pointer-events-none opacity-75 flex flex-col justify-center transition-all duration-300 bg-gray-200 text-center font-semibold rounded-lg p-4 pb-6"
       >
         <svg
@@ -42,7 +42,7 @@ const DownloadModal = ({ toggleDownload, showDlModal }) => {
           />
         </svg>
 
-        <div className="mt-2">Download Sketch file</div>
+        <div className="mt-2">Download Sketch file (Coming soon)</div>
       </a>
     </Modal>
   )
