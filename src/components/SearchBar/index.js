@@ -1,6 +1,7 @@
 import React, { useContext } from "react"
 import { AppContext } from "@/context/AppContext"
 import styles from "./searchbar.module.css"
+import icons from "@/data/icons"
 
 const SearchBar = () => {
   const { setFilter, category } = useContext(AppContext)
@@ -25,7 +26,7 @@ const SearchBar = () => {
         />
       </div>
       <h1 className="text-gray-700 text-center font-semibold text-2xl lg:text-3xl mt-4">
-        890+ Pixel perfect icons
+        {icons.length} Pixel perfect icons
       </h1>
     </section>
   )
