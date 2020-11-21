@@ -12,6 +12,17 @@
   }
 }
 
+.new {
+  top: 0.25rem;
+  left: 0.5rem;
+  font-size: 0.6rem;
+  &:before {
+    content: "";
+    top: 2px;
+    @apply w-2 h-2 rounded-full bg-yellow-500 absolute left-0;
+  }
+}
+
 .name {
   background: rgb(0 0 0 / 79%);
   padding: 0.25rem 0.5rem;

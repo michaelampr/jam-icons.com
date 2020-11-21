@@ -2,14 +2,21 @@ import React, { createRef, useContext } from "react"
 import { AppContext } from "@/context/AppContext"
 import PropTypes from "prop-types"
 import styles from "./icon-item.module.css"
+import { newUntil, newIcons } from "@/data/news"
 
 const IconItem = ({ icon }) => {
   const { setIsCopied, sizeFilter } = useContext(AppContext)
   const iconSize = sizeFilter || 24
 
   if (!icon) return ""
-
   const iconRef = createRef()
+
+  const isNew = () => {
+    const currentTimestamp = Math.round(new Date().getTime() / 1000)
+    return (
+      newUntil && currentTimestamp < newUntil && newIcons.includes(icon.name)
+    )
+  }
 
   const copyIcon = () => {
     setIsCopied(true)
@@ -34,6 +41,13 @@ const IconItem = ({ icon }) => {
       >
         {icon.name}
       </div>
+      {isNew() && (
+        <div
+          className={`${styles.new} pl-3 absolute uppercase font-bold text-yellow-500`}
+        >
+          New!
+        </div>
+      )}
       <div className="py-2 flex-1 flex items-center">
         <svg
           ref={iconRef}
