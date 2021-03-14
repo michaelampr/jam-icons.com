@@ -27,8 +27,11 @@ const DownloadModal = ({ toggleDownload, showDlModal }) => {
       </a>
 
       <a
-        href="#"
-        className="items-center pointer-events-none opacity-75 flex flex-col justify-center transition-all duration-300 bg-gray-200 text-center font-semibold rounded-lg p-4 pb-6"
+        href="/Jam3.1.0.zip"
+        target="_blank"
+        rel="noopener noreferrer"
+        download
+        className="items-center flex flex-col justify-center hover:bg-yellow-500 transition-all duration-300 bg-gray-200 text-center font-semibold rounded-lg p-4 pb-6"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +45,7 @@ const DownloadModal = ({ toggleDownload, showDlModal }) => {
           />
         </svg>
 
-        <div className="mt-2">Download Sketch file (Coming soon)</div>
+        <div className="mt-2">Download Sketch file</div>
       </a>
     </Modal>
   )
