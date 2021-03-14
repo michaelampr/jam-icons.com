@@ -9,6 +9,11 @@ const WhatsNewModal = ({ toggleWhatsNew, showWhatsNewModal }) => {
       title="What's new?"
       isOpen={showWhatsNewModal}
     >
+      <h2 className="text-lg font-bold mt-5 mb-1">v3.1.0</h2>
+      <ul>
+        <li>More icons have been added to the set.</li>
+        <li>You can now download the icons Sketch file.</li>
+      </ul>
       <h2 className="text-lg font-bold mt-5 mb-1">v3.0.0</h2>
       <ul>
         <li>Support for font and JS has been dropped to focus on SVGs only.</li>
