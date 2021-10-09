@@ -28,7 +28,9 @@
     "tailwindcss": "^1.8.10"
   },
   "keywords": [
-    "jam-icons", "jam", "svg"
+    "jam-icons",
+    "jam",
+    "svg"
   ],
   "license": "MIT",
   "scripts": {
