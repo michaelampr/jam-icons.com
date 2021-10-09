@@ -54,9 +54,7 @@ const IconItem = ({ icon }) => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox={icon.viewBox}
           width={iconSize}
-          height={iconSize}
-          preserveAspectRatio="xMinYMin"
-          className="icon__icon"
+          fill="currentColor"
           dangerouslySetInnerHTML={{
             __html: icon.path,
           }}
