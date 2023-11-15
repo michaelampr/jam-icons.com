@@ -1,0 +1,42 @@
+@import "./tailwind.css";
+
+html,
+body {
+  @apply font-body text-gray-900;
+}
+
+.item-list {
+  margin: -0.75rem;
+}
+
+button:focus,
+input:focus {
+  @apply outline-none;
+}
+
+.noScroll {
+  overflow: hidden;
+}
+
+::selection {
+  @apply bg-yellow-500 text-white;
+}
+
+/*
+ * Pulse animation for loading elements
+ */
+.pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
