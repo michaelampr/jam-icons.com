@@ -4,7 +4,7 @@
 
 html,
 body {
-	@apply font-body text-gray-900;
+	@apply font-body text-gray-900 bg-yellow-500;
 }
 
 * {
@@ -14,4 +14,8 @@ body {
 
 ::selection {
 	@apply bg-yellow-500 text-white;
+}
+
+input {
+	outline: none !important;
 }
