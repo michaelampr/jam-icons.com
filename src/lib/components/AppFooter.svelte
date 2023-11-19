@@ -2,6 +2,7 @@
 	<small class="text-xs"
 		>Made with <span class="animate-pulse">♥</span> by<!-- -->
 		<a
+			aria-label="Icons author personal website"
 			href="https://michaelamprimo.com"
 			target="_blank"
 			rel="noopener noreferrer"

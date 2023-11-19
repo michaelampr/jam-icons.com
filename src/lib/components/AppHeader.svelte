@@ -1,5 +1,5 @@
 <header class="py-8 flex justify-between items-center">
-	<a href="/">
+	<a href="/" aria-label="Link wrapping logo website">
 		<svg viewBox="0 0 485 160" xmlns="http://www.w3.org/2000/svg" class="text-black w-20">
 			<path
 				class="o"
@@ -10,6 +10,7 @@
 	</a>
 	<nav>
 		<a
+			aria-label="Link to icons Github repo"
 			href="https://github.com/michaelampr/jam"
 			target="_blank"
 			rel="noopener"
