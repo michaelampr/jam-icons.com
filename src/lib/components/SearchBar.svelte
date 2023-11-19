@@ -1,8 +1,22 @@
+<script>
+	import { createEventDispatcher } from 'svelte';
+
+	export let value;
+
+	const dispatch = createEventDispatcher();
+
+	const handleOnChange = (e) => {
+		dispatch('input', e.target.value);
+	};
+</script>
+
 <div class="relative">
 	<input
 		type="text"
-		class="py-3 px-6 text-base font-semibold rounded-full w-full shadow focus:outline-none active:outline-none focus:shadow-lg transition-all duration-200 pr-24"
-		placeholder="Type to search among 940+ unique icons"
+		class="py-3 px-6 text-base placeholder-shown:text-gray-500 font-semibold rounded-full w-full shadow focus:outline-none active:outline-none focus:shadow-lg transition-all duration-200 pr-24"
+		placeholder="Search icons"
+		bind:value
+		on:input={handleOnChange}
 	/>
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
