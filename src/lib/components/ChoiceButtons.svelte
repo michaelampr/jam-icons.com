@@ -6,8 +6,8 @@
 
 	let choicesWrapper;
 
-	$: elWidth = 0;
-	$: left = 0;
+	$: elWidth = 37;
+	$: left = -7;
 
 	const handleOnClick = async (choice) => {
 		value = choice;
@@ -38,10 +38,8 @@
 			>{choice}</button
 		>
 	{/each}
-	{#if elWidth > 0}
-		<div
-			class="absolute top-0 left-0 h-full rounded-2xl bg-black duration-200 transition-all"
-			style="width: {elWidth}px;left: {left}px"
-		/>
-	{/if}
+	<div
+		class="absolute top-0 left-0 h-full rounded-2xl bg-black duration-200 transition-all"
+		style="width: {elWidth}px;left: {left}px"
+	/>
 </div>
