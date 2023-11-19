@@ -61,7 +61,11 @@
 	/>
 </svelte:head>
 
-<header class="max-w-2xl mx-auto space-y-3 pt-12 pb-6">
+<header class="max-w-2xl mx-auto space-y-3 py-6">
+	<h1 class="text-2xl text-center font-bold mb-8 max-w-2xl mx-auto">
+		A comprehensive collection of over 940 meticulously crafted &amp; free SVG icons, for all your
+		projects.
+	</h1>
 	<SearchBar bind:value={query} />
 	<section class="flex space-y-3 md:space-y-0 flex-col md:flex-row justify-between">
 		<ChoiceButtons bind:value={activeChoice} {choices} />
